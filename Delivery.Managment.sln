@@ -15,7 +15,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastru
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{6496704B-2F3F-4122-8AD9-E2CA7C51B068}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Delivery.Managment.Domain", "Delivery.Managment.Domain\Delivery.Managment.Domain.csproj", "{8ED5AEA4-984D-4141-8841-D132240C48CC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Delivery.Managment.Domain", "Delivery.Managment.Domain\Delivery.Managment.Domain.csproj", "{8ED5AEA4-984D-4141-8841-D132240C48CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Delivery.Managment.Deliveries", "Delivery.Managment.Deliveries\Delivery.Managment.Deliveries.csproj", "{9ACD8104-D826-469D-93BE-A81275F997B9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{8ED5AEA4-984D-4141-8841-D132240C48CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8ED5AEA4-984D-4141-8841-D132240C48CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8ED5AEA4-984D-4141-8841-D132240C48CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9ACD8104-D826-469D-93BE-A81275F997B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9ACD8104-D826-469D-93BE-A81275F997B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9ACD8104-D826-469D-93BE-A81275F997B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9ACD8104-D826-469D-93BE-A81275F997B9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -37,6 +43,7 @@ Global
 		{E96DB7BA-CC09-45BC-B013-95D03E389E04} = {28A3438E-4DA3-44CD-BF3E-E8916968FA31}
 		{6496704B-2F3F-4122-8AD9-E2CA7C51B068} = {28A3438E-4DA3-44CD-BF3E-E8916968FA31}
 		{8ED5AEA4-984D-4141-8841-D132240C48CC} = {59FE6ECB-E532-49EC-85ED-22066D39D424}
+		{9ACD8104-D826-469D-93BE-A81275F997B9} = {59FE6ECB-E532-49EC-85ED-22066D39D424}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DB61C1A4-3989-4D1A-A2DF-C1F3A9E15401}

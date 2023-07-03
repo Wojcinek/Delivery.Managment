@@ -7,7 +7,7 @@ using Delivery.Managment.Domain.Common;
 
 namespace Delivery.Managment.Domain
 {
-    internal class DeliveryAllocation : BaseDomainEntity
+    public class DeliveryAllocation : BaseDomainEntity
     {
         public DeliveryType DeliveryType { get; set; }
         public int DeliveryTypeId { get; set; }

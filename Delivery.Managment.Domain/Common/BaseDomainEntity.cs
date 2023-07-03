@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace Delivery.Managment.Domain.Common
 {
-    internal class BaseDomainEntity
+    public abstract class BaseDomainEntity
     {
+        public int Id { get; set; }
+        public DateTime DateCreated { get; set; }
+        public DateTime LastModifiedDate { get; set; }
+        public string LastModifiedBy { get; set; }
+
+
     }
 }
