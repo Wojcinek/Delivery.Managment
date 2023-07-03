@@ -4,12 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Delivery.Managment.Deliveries.DTOs;
-using Delivery.Managment.Deliveries.Features.DeliveryTypes.Requests;
 using MediatR;
-using System.Threading;
-using System.Threading.Tasks;
 using Delivery.Managment.Deliveries.Persistence.NewFolder;
 using AutoMapper;
+using Delivery.Managment.Deliveries.Features.DeliveryTypes.Requests.Queries;
 
 namespace Delivery.Managment.Deliveries.Features.DeliveryTypes.Handlers.Queries
 {

@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 using Delivery.Managment.Deliveries.DTOs;
 using MediatR;
 
-namespace Delivery.Managment.Deliveries.Features.DeliveryTypes.Requests
+namespace Delivery.Managment.Deliveries.Features.DeliveryTypes.Requests.Queries
 {
-    public class GetDeliveryTypeDetailRequest : IRequest<DeliveryTypeDto>
+    public class GetDeliveryTypeListRequest : IRequest<List<DeliveryTypeDto>>
     {
-        public int Id { get; set; }
     }
 }
