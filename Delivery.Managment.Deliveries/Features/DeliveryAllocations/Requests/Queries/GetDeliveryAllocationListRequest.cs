@@ -8,7 +8,7 @@ using MediatR;
 
 namespace Delivery.Managment.Deliveries.Features.DeliveryAllocations.Requests.Queries
 {
-    public class GetDeliveryAllocationListlRequest : IRequest<List<DeliveryAllocationDto>>
+    public class GetDeliveryAllocationListRequest : IRequest<List<DeliveryAllocationDto>>
     {
 
     }
