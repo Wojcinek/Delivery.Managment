@@ -3,14 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Delivery.Managment.Domain.Common;
 
 namespace Delivery.Managment.Domain
 {
-    public class DeliveryType
+    public class DeliveryType : BaseDomainEntity
     {
-        public int Id { get; set; } 
         public string Name { get; set; }    
-        public DateTime DateCreated { get; set; }
 
     }
 }
