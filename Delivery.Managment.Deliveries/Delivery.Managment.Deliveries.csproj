@@ -18,10 +18,6 @@
   <ItemGroup>
     <Folder Include="Features\DeliveryAllocations\Handlers\Commands\" />
     <Folder Include="Features\DeliveryAllocations\Requests\Commands\" />
-    <Folder Include="Features\DeliveryRequests\Handlers\Commands\" />
-    <Folder Include="Features\DeliveryRequests\Requests\Commands\" />
-    <Folder Include="Features\DeliveryTypes\Handlers\Commands\" />
-    <Folder Include="Features\DeliveryTypes\Requests\Commands\" />
   </ItemGroup>
 
 </Project>

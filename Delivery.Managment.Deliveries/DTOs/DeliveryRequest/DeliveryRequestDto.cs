@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Delivery.Managment.Deliveries.DTOs.Common;
+using Delivery.Managment.Deliveries.DTOs.DeliveryType;
 using Delivery.Managment.Domain;
 
 namespace Delivery.Managment.Deliveries.DTOs.DeliveryRequest

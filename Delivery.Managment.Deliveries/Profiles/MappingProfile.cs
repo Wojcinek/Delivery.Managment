@@ -4,8 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AutoMapper;
-using Delivery.Managment.Deliveries.DTOs;
+using Delivery.Managment.Deliveries.DTOs.DeliveryAllocation;
 using Delivery.Managment.Deliveries.DTOs.DeliveryRequest;
+using Delivery.Managment.Deliveries.DTOs.DeliveryType;
 using Delivery.Managment.Domain;
 
 namespace Delivery.Managment.Deliveries.Profiles

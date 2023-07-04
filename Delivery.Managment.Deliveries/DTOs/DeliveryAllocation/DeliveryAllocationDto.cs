@@ -5,13 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 using Delivery.Managment.Deliveries.DTOs.Common;
 using Delivery.Managment.Deliveries.DTOs.DeliveryType;
+using Delivery.Managment.Domain;
 
-namespace Delivery.Managment.Deliveries.DTOs.DeliveryRequest
+namespace Delivery.Managment.Deliveries.DTOs.DeliveryAllocation
 {
-    public class DeliveryRequestListDto : BaseDto
+    public class DeliveryAllocationDto : BaseDto
     {
         public DeliveryTypeDto DeliveryType { get; set; }
-        public DateTime ShipDate { get; set; }
-        public bool? Sent { get; set; }
+        public int DeliveryTypeId { get; set; }
+        public string Warehouse { get; set; }
     }
 }

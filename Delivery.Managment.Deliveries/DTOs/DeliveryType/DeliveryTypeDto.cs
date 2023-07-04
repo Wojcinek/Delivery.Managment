@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Delivery.Managment.Deliveries.DTOs.Common;
 
-namespace Delivery.Managment.Deliveries.DTOs
+namespace Delivery.Managment.Deliveries.DTOs.DeliveryType
 {
     public class DeliveryTypeDto : BaseDto
     {

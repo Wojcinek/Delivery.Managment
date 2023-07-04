@@ -4,14 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Delivery.Managment.Deliveries.DTOs.Common;
-using Delivery.Managment.Domain;
+using Delivery.Managment.Deliveries.DTOs.DeliveryType;
 
-namespace Delivery.Managment.Deliveries.DTOs
+namespace Delivery.Managment.Deliveries.DTOs.DeliveryRequest
 {
-    public class DeliveryAllocationDto : BaseDto
+    public class CreateDeliveryRequestDto : BaseDto
     {
+        public DateTime ShipDate { get; set; }
         public DeliveryTypeDto DeliveryType { get; set; }
         public int DeliveryTypeId { get; set; }
-        public string Warehouse { get; set; }
+        public string RequestComments { get; set; }
+
     }
 }

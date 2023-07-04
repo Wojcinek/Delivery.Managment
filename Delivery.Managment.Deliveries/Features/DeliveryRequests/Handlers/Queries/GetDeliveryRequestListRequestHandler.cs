@@ -12,21 +12,21 @@ using MediatR;
 
 namespace Delivery.Managment.Deliveries.Features.DeliveryRequests.Queries
 {
-    public class GetDeliveryRequestListRequestHandler : IRequestHandler<GetDeliveryRequestListRequest, List<DeliveryRequestDto>>
+    public class GetDeliveryRequestListRequestHandler : IRequestHandler<GetDeliveryRequestListRequest, List<DeliveryRequestListDto>>
     {
         private readonly IDeliveryRequestRepository _deliveryRequestRepository;
         private readonly IMapper _mapper;
 
-        public GetDeliveryRequestListRequestHandler(IDeliveryRequestRepository deliveryTypeRepository, IMapper mapper)
+        public GetDeliveryRequestListRequestHandler(IDeliveryRequestRepository deliveryRequestRepository, IMapper mapper)
         {
-            _deliveryRequestRepository = deliveryTypeRepository;
+            _deliveryRequestRepository = deliveryRequestRepository;
             _mapper = mapper;
         }
 
-        public async Task<List<DeliveryRequestDto>> Handle(GetDeliveryRequestListRequest request, CancellationToken cancellationToken)
+        public async Task<List<DeliveryRequestListDto>> Handle(GetDeliveryRequestListRequest request, CancellationToken cancellationToken)
         {
-            var deliveryRequest = await _deliveryRequestRepository.GetAll();
-            return _mapper.Map<List<DeliveryRequestDto>>(deliveryRequest);
+            var deliveryRequest = await _deliveryRequestRepository.GetDeliveryRequestWithDetails();
+            return _mapper.Map<List<DeliveryRequestListDto>>(deliveryRequest);
         }
     }
 }

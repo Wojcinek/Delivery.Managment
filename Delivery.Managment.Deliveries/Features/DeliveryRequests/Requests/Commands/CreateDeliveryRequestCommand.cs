@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Delivery.Managment.Deliveries.Features.DeliveryRequests.Queries
+namespace Delivery.Managment.Deliveries.Features.DeliveryRequests.Requests.Commands
 {
-    public class GetDeliveryRequestDetailRequestHandler
+    internal class CreateDeliveryRequestCommand
     {
     }
 }

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AutoMapper;
-using Delivery.Managment.Deliveries.DTOs;
+using Delivery.Managment.Deliveries.DTOs.DeliveryType;
 using Delivery.Managment.Deliveries.Features.DeliveryTypes.Requests.Queries;
 using Delivery.Managment.Deliveries.Persistence.NewFolder;
 using MediatR;

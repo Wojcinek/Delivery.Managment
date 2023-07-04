@@ -10,5 +10,6 @@ namespace Delivery.Managment.Deliveries.Features.DeliveryRequests.Requests.Queri
 {
     public class GetDeliveryRequestDetailRequest : IRequest<DeliveryRequestDto>
     {
+        public int Id { get; set; }
     }
 }
