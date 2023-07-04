@@ -8,12 +8,11 @@ using Delivery.Managment.Deliveries.DTOs.DeliveryType;
 
 namespace Delivery.Managment.Deliveries.DTOs.DeliveryRequest
 {
-    public class CreateDeliveryRequestDto
+    public class UpdateDeliveryRequestDto : BaseDto
     {
         public DateTime ShipDate { get; set; }
         public DeliveryTypeDto DeliveryType { get; set; }
         public int DeliveryTypeId { get; set; }
         public string RequestComments { get; set; }
-
     }
 }

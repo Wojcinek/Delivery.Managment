@@ -8,8 +8,8 @@ using MediatR;
 
 namespace Delivery.Managment.Deliveries.Features.DeliveryAllocations.Requests.Commands
 {
-    public class CreateDeliveryAllocationCommand : IRequest<int>
+    public class UpdateDeliveryAllocationCommand : IRequest<Unit>
     {
-        public CreateDeliveryAllocationDto DeliveryAllocationDto { get; set; }
+        public UpdateDeliveryAllocationCommand DeliveryAllocationDto { get; set; }
     }
 }

@@ -9,7 +9,7 @@ namespace Delivery.Managment.Domain
 {
     public class DeliveryType : BaseDomainEntity
     {
-        public string Name { get; set; }    
+        public string Name { get; set; }   
 
     }
 }

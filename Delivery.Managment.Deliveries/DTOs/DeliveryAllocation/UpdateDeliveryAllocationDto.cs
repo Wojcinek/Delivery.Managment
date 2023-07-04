@@ -7,7 +7,7 @@ using Delivery.Managment.Deliveries.DTOs.Common;
 
 namespace Delivery.Managment.Deliveries.DTOs.DeliveryAllocation
 {
-    public class CreateDeliveryAllocationDto
+    public class UpdateDeliveryAllocationDto : BaseDto
     {
         public int DeliveryTypeId { get; set; }
         public string Warehouse { get; set; }

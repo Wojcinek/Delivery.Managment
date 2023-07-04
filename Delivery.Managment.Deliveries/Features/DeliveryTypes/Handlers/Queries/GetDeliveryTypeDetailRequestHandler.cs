@@ -11,7 +11,7 @@ using MediatR;
 
 namespace Delivery.Managment.Deliveries.Features.DeliveryTypes.Handlers.Queries
 {
-    internal class GetDeliveryTypeDetailRequestHandler : IRequestHandler<GetDeliveryTypeDetailRequest, DeliveryTypeDto>
+    public class GetDeliveryTypeDetailRequestHandler : IRequestHandler<GetDeliveryTypeDetailRequest, DeliveryTypeDto>
     {
         private readonly IDeliveryTypeRepository _deliveryTypeRepository;
         private readonly IMapper _mapper;
