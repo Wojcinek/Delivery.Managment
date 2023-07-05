@@ -11,7 +11,8 @@ namespace Delivery.Managment.Deliveries.Features.DeliveryRequests.Requests.Comma
     public class UpdateDeliveryRequestCommand : IRequest<Unit>
     {
         public int Id { get; set; }
-        public DeliveryRequestDto DeliveryRequestDto { get; set; }
+
+        public UpdateDeliveryRequestDto DeliveryRequestDto { get; set; }
 
         public ChangeDeliveryRequestSentDto ChangeDeliveryRequestSentDto { get; set;}
     }
