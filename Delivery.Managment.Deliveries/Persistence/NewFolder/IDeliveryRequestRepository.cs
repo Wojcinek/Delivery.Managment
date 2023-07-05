@@ -13,5 +13,9 @@ namespace Delivery.Managment.Deliveries.Persistence.NewFolder
 
         Task<List<DeliveryRequest>> GetDeliveryRequestWithDetails();
 
+        Task ChangeSentStatus(DeliveryRequest deliveryRequest, bool? DeliveryStatus);
+
+
+
     }
 }

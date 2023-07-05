@@ -11,6 +11,6 @@ namespace Delivery.Managment.Deliveries.Persistence.NewFolder
     public interface IDeliveryAllocationRepository : IGenericRepository<DeliveryAllocation>
     {
         Task<DeliveryAllocation> GetDeliveryAllocationWithDetails(int id);
-        Task<List<DeliveryAllocation>> GetAllDeliveryAllocationsWithDetails();
+        Task<List<DeliveryAllocation>> GetAllDeliveryAllocationWithDetails();
     }
 }
