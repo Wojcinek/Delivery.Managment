@@ -10,6 +10,6 @@ namespace Delivery.Managment.Deliveries.Features.DeliveryTypes.Requests.Commands
 {
     public class CreateDeliveryTypeCommand : IRequest<int>
     {
-        public DeliveryTypeDto DeliveryTypeDto { get; set; }
+        public CreateDeliveryTypeDto DeliveryTypeDto { get; set; }
     }
 }

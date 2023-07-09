@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Delivery.Managment.Deliveries.DTOs.DeliveryRequest;
+using Delivery.Managment.Deliveries.DTOs.DeliveryType;
 using MediatR;
 
 namespace Delivery.Managment.Deliveries.Features.DeliveryRequests.Requests.Commands

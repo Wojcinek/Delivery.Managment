@@ -9,7 +9,7 @@ using Delivery.Managment.Domain;
 
 namespace Delivery.Managment.Deliveries.DTOs.DeliveryAllocation
 {
-    public class DeliveryAllocationDto : BaseDto
+    public class DeliveryAllocationDto : BaseDto, IDeliveryAllocationDto
     {
         public DeliveryTypeDto DeliveryType { get; set; }
         public int DeliveryTypeId { get; set; }

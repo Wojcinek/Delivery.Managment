@@ -9,7 +9,7 @@ using Delivery.Managment.Domain;
 
 namespace Delivery.Managment.Deliveries.DTOs.DeliveryRequest
 {
-    public class DeliveryRequestDto : BaseDto
+    public class DeliveryRequestDto : BaseDto, IDeliveryRequestDto
     {
         public DateTime ShipDate { get; set; }
         public DeliveryTypeDto DeliveryType { get; set; }

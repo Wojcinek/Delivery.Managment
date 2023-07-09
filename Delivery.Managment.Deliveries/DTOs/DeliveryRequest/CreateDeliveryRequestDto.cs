@@ -8,7 +8,7 @@ using Delivery.Managment.Deliveries.DTOs.DeliveryType;
 
 namespace Delivery.Managment.Deliveries.DTOs.DeliveryRequest
 {
-    public class CreateDeliveryRequestDto
+    public class CreateDeliveryRequestDto : IDeliveryRequestDto
     {
         public DateTime ShipDate { get; set; }
         public DeliveryTypeDto DeliveryType { get; set; }
