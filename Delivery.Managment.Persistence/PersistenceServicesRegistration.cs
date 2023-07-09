@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Delivery.Managment.Deliveries.Persistence.NewFolder;
 using Delivery.Managment.Persistence.Repositories;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
