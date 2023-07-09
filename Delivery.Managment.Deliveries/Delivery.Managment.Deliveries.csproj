@@ -16,4 +16,8 @@
     <ProjectReference Include="..\Delivery.Managment.Domain\Delivery.Managment.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Presistence\Infrastructure\" />
+  </ItemGroup>
+
 </Project>
