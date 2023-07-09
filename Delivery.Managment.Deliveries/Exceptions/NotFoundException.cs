@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Delivery.Managment.Deliveries.Exceptions
 {
-    internal class NotFoundException
+    public class NotFoundException : ApplicationException
     {
+        public NotFoundException(string name, object key) : base($"{name} ({key}) was not found")
+        {
+            
+        }
     }
 }
