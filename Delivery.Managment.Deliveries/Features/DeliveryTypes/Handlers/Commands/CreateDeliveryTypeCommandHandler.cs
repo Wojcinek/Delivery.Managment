@@ -6,10 +6,10 @@ using System.Threading;
 using System.Threading.Tasks;
 using AutoMapper;
 using Delivery.Managment.Deliveries.DTOs.DeliveryType.Validators;
+using Delivery.Managment.Deliveries.Exceptions;
 using Delivery.Managment.Deliveries.Features.DeliveryTypes.Requests.Commands;
 using Delivery.Managment.Deliveries.Persistence.NewFolder;
 using Delivery.Managment.Domain;
-using FluentValidation;
 using MediatR;
 
 namespace Delivery.Managment.Deliveries.Features.DeliveryTypes.Handlers.Commands
@@ -31,7 +31,7 @@ namespace Delivery.Managment.Deliveries.Features.DeliveryTypes.Handlers.Commands
 
             if (validationResult.IsValid == false)
             {
-                throw new Exception();
+                throw new ValidationException(validationResult);
             }
 
             var deliveryType = _mapper.Map<DeliveryType>(request.DeliveryTypeDto);

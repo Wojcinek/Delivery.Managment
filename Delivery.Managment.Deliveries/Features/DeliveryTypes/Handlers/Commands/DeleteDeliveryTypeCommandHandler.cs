@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AutoMapper;
+using Delivery.Managment.Deliveries.Exceptions;
 using Delivery.Managment.Deliveries.Features.DeliveryTypes.Requests.Commands;
 using Delivery.Managment.Deliveries.Persistence.NewFolder;
 using Delivery.Managment.Domain;
@@ -24,6 +25,11 @@ namespace Delivery.Managment.Deliveries.Features.DeliveryTypes.Handlers.Commands
         public async Task<Unit> Handle(DeleteDeliveryTypeCommand request, CancellationToken cancellationToken)
         {
             var deliveryType = await _deliveryTypeRepository.get(request.Id);
+
+            if(deliveryType == null) 
+            {
+                throw new NotFoundException(nameof(DeliveryType), request.Id);
+            }
 
             await _deliveryTypeRepository.Delete(deliveryType);
 

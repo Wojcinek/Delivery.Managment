@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using AutoMapper;
 using Delivery.Managment.Deliveries.DTOs.DeliveryRequest.Validators;
+using Delivery.Managment.Deliveries.Exceptions;
 using Delivery.Managment.Deliveries.Features.DeliveryRequests.Requests.Commands;
 using Delivery.Managment.Deliveries.Persistence.NewFolder;
 using MediatR;
@@ -32,7 +33,7 @@ namespace Delivery.Managment.Deliveries.Features.DeliveryRequests.Handlers.Comma
             
             if (validationResult.IsValid == false) 
             {
-                throw new Exception();
+                throw new ValidationException(validationResult);
             }
             
             var deliveryRequest = await _deliveryRequestRepository.get(request.Id);

@@ -4,8 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AutoMapper;
+using Delivery.Managment.Deliveries.Exceptions;
 using Delivery.Managment.Deliveries.Features.DeliveryAllocations.Requests.Commands;
 using Delivery.Managment.Deliveries.Persistence.NewFolder;
+using Delivery.Managment.Domain;
 using MediatR;
 
 namespace Delivery.Managment.Deliveries.Features.DeliveryAllocations.Handlers.Commands
@@ -23,6 +25,11 @@ namespace Delivery.Managment.Deliveries.Features.DeliveryAllocations.Handlers.Co
         public async Task<Unit> Handle(DeleteDeliveryAllocationCommand request, CancellationToken cancellationToken)
         {
             var deliveryAllocation = await _deliveryAllocationRepository.get(request.Id);
+
+            if (deliveryAllocation == null)
+            {
+                throw new NotFoundException(nameof(DeliveryAllocation), request.Id);
+            }
 
             await _deliveryAllocationRepository.Delete(deliveryAllocation);
 

@@ -7,8 +7,8 @@ using Delivery.Managment.Deliveries.DTOs.Common;
 
 namespace Delivery.Managment.Deliveries.DTOs.DeliveryType
 {
-    public class CreateDeliveryTypeDto
+    public class CreateDeliveryTypeDto : IDeliveryTypeDto
     {
-        public string Name;
+        public string Name { get; set; }
     }
 }

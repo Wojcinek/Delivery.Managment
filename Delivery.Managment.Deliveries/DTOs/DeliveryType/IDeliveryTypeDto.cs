@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Delivery.Managment.Deliveries.DTOs.DeliveryType
 {
-    internal class IDeliveryTypeDto
+    public interface IDeliveryTypeDto
     {
+        public string Name { get; set; }
     }
 }

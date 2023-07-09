@@ -11,10 +11,7 @@ namespace Delivery.Managment.Deliveries.DTOs.DeliveryType.Validators
     {
         public CreateDeliveryTypeDtoValidator()
         {
-            RuleFor(p => p.Name)
-                .NotEmpty()
-                .NotNull()
-                .MaximumLength(50).WithMessage("Maximum characters 50");
+           Include(new IDeliveryTypeDtoValidator());
         }
     }
 }

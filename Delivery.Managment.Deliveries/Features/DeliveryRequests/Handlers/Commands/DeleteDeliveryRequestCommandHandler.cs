@@ -4,8 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AutoMapper;
+using Delivery.Managment.Deliveries.Exceptions;
 using Delivery.Managment.Deliveries.Features.DeliveryRequests.Requests.Commands;
 using Delivery.Managment.Deliveries.Persistence.NewFolder;
+using Delivery.Managment.Domain;
 using MediatR;
 
 namespace Delivery.Managment.Deliveries.Features.DeliveryRequests.Handlers.Commands
@@ -23,6 +25,11 @@ namespace Delivery.Managment.Deliveries.Features.DeliveryRequests.Handlers.Comma
         public async Task<Unit> Handle(DeleteDeliveryRequestCommand request, CancellationToken cancellationToken)
         {
             var deliveryRequest = await _deliveryRequestRepository.get(request.Id);
+
+            if (deliveryRequest == null)
+            {
+                throw new NotFoundException(nameof(DeliveryRequest), request.Id);
+            }
 
             await _deliveryRequestRepository.Delete(deliveryRequest);
 

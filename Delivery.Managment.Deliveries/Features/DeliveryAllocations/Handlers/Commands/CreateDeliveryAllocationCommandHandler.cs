@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using AutoMapper;
 using Delivery.Managment.Deliveries.DTOs.DeliveryAllocation.Validators;
 using Delivery.Managment.Deliveries.DTOs.DeliveryRequest.Validators;
+using Delivery.Managment.Deliveries.Exceptions;
 using Delivery.Managment.Deliveries.Features.DeliveryAllocations.Requests.Commands;
 using Delivery.Managment.Deliveries.Persistence.NewFolder;
 using Delivery.Managment.Domain;
@@ -32,7 +33,7 @@ namespace Delivery.Managment.Deliveries.Features.DeliveryAllocations.Handlers.Co
 
             if (validationResult.IsValid == false)
             {
-                throw new Exception();
+                throw new ValidationException(validationResult);
             }
 
             var deliveryAllocation = _mapper.Map<DeliveryAllocation>(request.DeliveryAllocationDto);
