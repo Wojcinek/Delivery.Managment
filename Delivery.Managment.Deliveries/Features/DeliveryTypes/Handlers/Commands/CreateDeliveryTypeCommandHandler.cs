@@ -33,18 +33,22 @@ namespace Delivery.Managment.Deliveries.Features.DeliveryTypes.Handlers.Commands
 
             if (validationResult.IsValid == false)
             {
-                throw new ValidationException(validationResult);
+                response.Success = false;
                 response.Message = "Creation Failed";
                 response.Errors = validationResult.Errors.Select(q => q.ErrorMessage).ToList();
             }
+            else
+            {
+                var deliveryType = _mapper.Map<DeliveryType>(request.DeliveryTypeDto);
 
-            var deliveryType = _mapper.Map<DeliveryType>(request.DeliveryTypeDto);
+                deliveryType = await _deliveryTypeRepository.Add(deliveryType);
 
-            deliveryType = await _deliveryTypeRepository.Add(deliveryType);
+                response.Success = true;
+                response.Message = "Creation Successful";
+                response.Id = deliveryType.Id;
+            }
 
-            response.Success = true;
-            response.Message = "Creation Successful";
-            response.Id = deliveryType.Id;
+           
             return response;
         }
     }

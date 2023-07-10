@@ -1,6 +1,7 @@
 ﻿using Delivery.Managment.Deliveries.DTOs.DeliveryType;
 using Delivery.Managment.Deliveries.Features.DeliveryTypes.Requests.Commands;
 using Delivery.Managment.Deliveries.Features.DeliveryTypes.Requests.Queries;
+using Delivery.Managment.Deliveries.Responses;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -35,7 +36,9 @@ namespace Delivery.Managment.API.Controllers
 
         // POST api/<DeliveryTypesController>
         [HttpPost]
-        public async Task<ActionResult> Post([FromBody] CreateDeliveryTypeDto deliveryType)
+        [ProducesResponseType(200)]
+        [ProducesResponseType(400)]
+        public async Task<ActionResult<BaseCommandResponse>> Post([FromBody] CreateDeliveryTypeDto deliveryType)
         {
             var command = new CreateDeliveryTypeCommand { DeliveryTypeDto = deliveryType };
             var response = await _mediator.Send(command);

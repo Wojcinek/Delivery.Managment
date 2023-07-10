@@ -1,6 +1,22 @@
+
+using Delivery.Managment.MVC.Contracts;
+using Delivery.Managment.MVC.Services;
+using Delivery.Managment.MVC.Services.Base;
+using System.Reflection;
+
 var builder = WebApplication.CreateBuilder(args);
 
+
+
 // Add services to the container.
+builder.Services.AddHttpClient<IClient, Client>(cl => cl.BaseAddress = new Uri("http://localhost:30388"));
+builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
+
+//builder.Services.AddScoped<IDeliveryTypeService, DeliveryTypeService>();
+//builder.Services.AddScoped<IDeliveryAllocationService, DeliveryAllocationService>();
+//builder.Services.AddScoped<IDeliveryRequestService, DeliveryRequestService>();
+
+builder.Services.AddSingleton<ILocalStorageService, LocalStorageService>();
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
