@@ -18,7 +18,7 @@ namespace Delivery.Managment.Persistence
         {
             services.AddDbContext<DeliveryManagmentDbContext>(options =>
                 options.UseSqlServer(
-                    configuration.GetConnectionString("DeliveryManagmentConnectionString")));
+                    configuration.GetConnectionString("DeliveryManagementConnectionString")));
 
             services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
             services.AddScoped<IDeliveryTypeRepository, DeliveryTypeRepository>();

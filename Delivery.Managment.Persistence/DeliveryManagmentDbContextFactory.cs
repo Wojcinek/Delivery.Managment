@@ -19,7 +19,7 @@ namespace Delivery.Managment.Persistence
                 .Build();
 
             var builder = new DbContextOptionsBuilder<DeliveryManagmentDbContext>();
-            var connectionString = configuration.GetConnectionString("EmployeeManagementConnectionString");
+            var connectionString = configuration.GetConnectionString("DeliveryManagementConnectionString");
 
             builder.UseSqlServer(connectionString);
 

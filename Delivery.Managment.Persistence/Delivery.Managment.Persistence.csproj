@@ -19,4 +19,8 @@
     <ProjectReference Include="..\Delivery.Managment.Deliveries\Delivery.Managment.Deliveries.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Migrations\" />
+  </ItemGroup>
+
 </Project>
