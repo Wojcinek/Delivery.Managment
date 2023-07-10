@@ -1,24 +1,34 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Delivery.Managment.MVC.Contracts;
+using Delivery.Managment.MVC.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Delivery.Managment.MVC.Controllers
 {
     public class DeliveryTypeController : Controller
     {
-        // GET: DeliveryTypeController
-        public ActionResult Index()
+        private readonly IDeliveryTypeService _deliveryTypeRepository;
+
+            public DeliveryTypeController(IDeliveryTypeService deliveryTypeRepository)
         {
-            return View();
+            _deliveryTypeRepository = deliveryTypeRepository;
+        }
+
+        // GET: DeliveryTypeController
+        public async Task<ActionResult> Index()
+        {
+            var model = await _deliveryTypeRepository.GetDeliveryTypes();
+            return View(model);
         }
 
         // GET: DeliveryTypeController/Details/5
-        public ActionResult Details(int id)
+        public async Task<ActionResult> Details(int id)
         {
             return View();
         }
 
         // GET: DeliveryTypeController/Create
-        public ActionResult Create()
+        public async Task<ActionResult> Create()
         {
             return View();
         }
@@ -26,7 +36,7 @@ namespace Delivery.Managment.MVC.Controllers
         // POST: DeliveryTypeController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public async Task<ActionResult> Create(IFormCollection collection)
         {
             try
             {
@@ -39,7 +49,7 @@ namespace Delivery.Managment.MVC.Controllers
         }
 
         // GET: DeliveryTypeController/Edit/5
-        public ActionResult Edit(int id)
+        public async Task<ActionResult> Edit(int id)
         {
             return View();
         }
@@ -60,7 +70,7 @@ namespace Delivery.Managment.MVC.Controllers
         }
 
         // GET: DeliveryTypeController/Delete/5
-        public ActionResult Delete(int id)
+        public async Task<ActionResult> Delete(int id)
         {
             return View();
         }
@@ -68,7 +78,7 @@ namespace Delivery.Managment.MVC.Controllers
         // POST: DeliveryTypeController/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
+        public async Task<ActionResult> Delete(int id, IFormCollection collection)
         {
             try
             {

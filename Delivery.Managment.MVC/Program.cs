@@ -11,8 +11,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddHttpClient<IClient, Client>(cl => cl.BaseAddress = new Uri("http://localhost:30388"));
 builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
-
-//builder.Services.AddScoped<IDeliveryTypeService, DeliveryTypeService>();
+builder.Services.AddScoped<IDeliveryTypeService, DeliveryTypeService>();
 //builder.Services.AddScoped<IDeliveryAllocationService, DeliveryAllocationService>();
 //builder.Services.AddScoped<IDeliveryRequestService, DeliveryRequestService>();
 
