@@ -140,7 +140,7 @@ namespace Delivery.Managment.MVC.Services.Base
 
         /// <returns>Success</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task DeliveryTypesPUTAsync(DeliveryTypeDto body);
+        System.Threading.Tasks.Task DeliveryTypesPUTAsync(string id, DeliveryTypeDto body);
 
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <returns>Success</returns>
@@ -342,7 +342,7 @@ namespace Delivery.Managment.MVC.Services.Base
 
         /// <returns>Success</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public virtual System.Threading.Tasks.Task DeliveryAllocationsPUTAsync(UpdateDeliveryAllocationDto body)
+        public System.Threading.Tasks.Task DeliveryAllocationsPUTAsync(UpdateDeliveryAllocationDto body)
         {
             return DeliveryAllocationsPUTAsync(body, System.Threading.CancellationToken.None);
         }
@@ -350,7 +350,7 @@ namespace Delivery.Managment.MVC.Services.Base
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <returns>Success</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public virtual async System.Threading.Tasks.Task DeliveryAllocationsPUTAsync(UpdateDeliveryAllocationDto body, System.Threading.CancellationToken cancellationToken)
+        public async System.Threading.Tasks.Task DeliveryAllocationsPUTAsync(UpdateDeliveryAllocationDto body, System.Threading.CancellationToken cancellationToken)
         {
             var urlBuilder_ = new System.Text.StringBuilder();
             urlBuilder_.Append("api/DeliveryAllocations");
@@ -788,7 +788,7 @@ namespace Delivery.Managment.MVC.Services.Base
 
         /// <returns>Success</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public virtual System.Threading.Tasks.Task DeliveryRequestsPUTAsync(int id, UpdateDeliveryRequestDto body)
+        public System.Threading.Tasks.Task DeliveryRequestsPUTAsync(int id, UpdateDeliveryRequestDto body)
         {
             return DeliveryRequestsPUTAsync(id, body, System.Threading.CancellationToken.None);
         }
@@ -796,7 +796,7 @@ namespace Delivery.Managment.MVC.Services.Base
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <returns>Success</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public virtual async System.Threading.Tasks.Task DeliveryRequestsPUTAsync(int id, UpdateDeliveryRequestDto body, System.Threading.CancellationToken cancellationToken)
+        public async System.Threading.Tasks.Task DeliveryRequestsPUTAsync(int id, UpdateDeliveryRequestDto body, System.Threading.CancellationToken cancellationToken)
         {
             if (id == null)
                 throw new System.ArgumentNullException("id");
@@ -1174,7 +1174,7 @@ namespace Delivery.Managment.MVC.Services.Base
 
         /// <returns>Success</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public virtual System.Threading.Tasks.Task DeliveryTypesPUTAsync(DeliveryTypeDto body)
+        public System.Threading.Tasks.Task DeliveryTypesPUTAsync(string id, DeliveryTypeDto body)
         {
             return DeliveryTypesPUTAsync(body, System.Threading.CancellationToken.None);
         }
@@ -1182,7 +1182,7 @@ namespace Delivery.Managment.MVC.Services.Base
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <returns>Success</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public virtual async System.Threading.Tasks.Task DeliveryTypesPUTAsync(DeliveryTypeDto body, System.Threading.CancellationToken cancellationToken)
+        public async System.Threading.Tasks.Task DeliveryTypesPUTAsync(DeliveryTypeDto body, System.Threading.CancellationToken cancellationToken)
         {
             var urlBuilder_ = new System.Text.StringBuilder();
             urlBuilder_.Append("api/DeliveryTypes");
